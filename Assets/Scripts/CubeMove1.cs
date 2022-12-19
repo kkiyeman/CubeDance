@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CubeMove1 : MonoBehaviour
 {
-    Camera camera;
+    
 
     private bool isMove;
     private Vector3 targetPosition;
 
     public float moveSpeed = 50f;
+
+
     private void Awake()
     {
-        camera = Camera.main;
+
     }
 
 
@@ -21,7 +23,7 @@ public class CubeMove1 : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
-            if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 MoveToTP(hit.point);
             }
@@ -32,6 +34,7 @@ public class CubeMove1 : MonoBehaviour
     private void MoveToTP(Vector3 target)
     {
         targetPosition = target;
+        targetPosition.y = transform.position.y;
         isMove = true;
     }
 
@@ -51,4 +54,6 @@ public class CubeMove1 : MonoBehaviour
             transform.position += Dir.normalized * Time.deltaTime * moveSpeed;
         }
     }
+
+
 }

@@ -412,8 +412,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9016226256970218492, guid: 4313972bd8691d545b9522f354aacbb5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 9016226257529529075}
+    - target: {fileID: 9016226256970218492, guid: 4313972bd8691d545b9522f354aacbb5, type: 3}
       propertyPath: moveSpeed
       value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4313972bd8691d545b9522f354aacbb5, type: 3}
+--- !u!4 &9016226257529529075 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1770822155248759675, guid: 4313972bd8691d545b9522f354aacbb5, type: 3}
+  m_PrefabInstance: {fileID: 9016226257529529074}
+  m_PrefabAsset: {fileID: 0}
