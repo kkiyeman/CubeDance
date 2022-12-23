@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CubeMoveOnly : MonoBehaviour
 {
-    Camera camera;
+    
 
     private bool isMove;
     private bool isRotate;
@@ -14,7 +14,7 @@ public class CubeMoveOnly : MonoBehaviour
 
     private void Awake()
     {
-        camera = Camera.main;
+        
     }
 
 
@@ -23,7 +23,7 @@ public class CubeMoveOnly : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
-            if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 MoveToTP(hit.point);
             }
